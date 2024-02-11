@@ -1,11 +1,12 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
-import com.google.gson.annotations.SerializedName
 
 
-data class CampaignBanners (
+@Parcelize
+data class Campaign_banners (
 
-  @SerializedName("domestic"      ) var domestic      : ArrayList<Domestic> = arrayListOf(),
-  @SerializedName("international" ) var international : ArrayList<String>   = arrayListOf()
-
-)
+  val domestic : List<Domestic>? = null,
+  val international : List<String>? = null
+):Parcelable

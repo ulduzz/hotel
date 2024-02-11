@@ -1,16 +1,18 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Policies (
 
-  @SerializedName("checkin"              ) var checkin             : Checkin? = Checkin(),
-  @SerializedName("checkout"             ) var checkout            : String?  = null,
-  @SerializedName("instructions"         ) var instructions        : String?  = null,
-  @SerializedName("special_instructions" ) var specialInstructions : String?  = null,
-  @SerializedName("checkin_min_age"      ) var checkinMinAge       : String?  = null,
-  @SerializedName("fees"                 ) var fees                : Fees?    = Fees(),
-  @SerializedName("know_before_you_go"   ) var knowBeforeYouGo     : String?  = null
-
-)
+  val checkin : Checkin? = null,
+  val checkout : String? = null,
+  val instructions : String? = null,
+  val special_instructions : String? = null,
+  val checkin_min_age : String? = null,
+  val fees : Fees? = null,
+  val know_before_you_go : String? = null
+):Parcelable

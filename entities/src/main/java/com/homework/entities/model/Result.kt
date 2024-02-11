@@ -1,15 +1,15 @@
-package com.example.example
+package com.homework.entities.model
 
-import com.google.gson.annotations.SerializedName
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 
+@Parcelize
 data class Result (
-
-  @SerializedName("requestId"      ) var requestId      : String?                   = null,
-  @SerializedName("funnelId"       ) var funnelId       : String?                   = null,
-  @SerializedName("offers"         ) var offers         : Offers?                   = Offers(),
-  @SerializedName("filters"        ) var filters        : ArrayList<Filters>        = arrayListOf(),
-  @SerializedName("sortingMethods" ) var sortingMethods : ArrayList<SortingMethods> = arrayListOf(),
-  @SerializedName("searchUrl"      ) var searchUrl      : String?                   = null
-
-)
+  val requestId : String? = null,
+  val funnelId : String? = null,
+  val offers : Offers? = null,
+  val filters : List<Filters>? = null,
+  val sortingMethods : List<SortingMethods>? = null,
+  val searchUrl : String? = null
+):Parcelable

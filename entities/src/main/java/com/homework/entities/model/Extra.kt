@@ -1,11 +1,13 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Extra (
 
-  @SerializedName("image_count"    ) var imageCount     : Int?    = null,
-  @SerializedName("thumbnailImage" ) var thumbnailImage : String? = null
-
-)
+  val image_count : Int? = null,
+  val thumbnailImage : String? = null
+):Parcelable

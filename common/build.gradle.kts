@@ -30,11 +30,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
 
-
+    implementation(Libs.Navigation.navigationUi)
+    implementation(Libs.Navigation.navigationFragment)
 
 
 

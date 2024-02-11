@@ -1,11 +1,13 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Fees (
 
-  @SerializedName("mandatory" ) var mandatory : String? = null,
-  @SerializedName("optional"  ) var optional  : String? = null
-
-)
+  val mandatory : String? = null,
+  val optional : String? = null
+):Parcelable

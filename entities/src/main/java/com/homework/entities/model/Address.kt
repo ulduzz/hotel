@@ -1,15 +1,17 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Address (
 
-  @SerializedName("address"     ) var address     : String?  = null,
-  @SerializedName("zipCode"     ) var zipCode     : String?  = null,
-  @SerializedName("country"     ) var country     : Country? = Country(),
-  @SerializedName("countryCode" ) var countryCode : String?  = null,
-  @SerializedName("town"        ) var town        : Town?    = Town(),
-  @SerializedName("city"        ) var city        : City?    = City()
-
-)
+  val address : String? = null,
+  val zipCode : Int? = null,
+  val country : Country? = null,
+  val countryCode : String? = null,
+  val town : Town? = null,
+  val city : City? = null
+):Parcelable

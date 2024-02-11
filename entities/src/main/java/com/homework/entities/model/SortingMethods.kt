@@ -1,13 +1,15 @@
-package com.example.example
+package com.homework.entities.model
 
-import com.google.gson.annotations.SerializedName
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 
+
+@Parcelize
 data class SortingMethods (
 
-  @SerializedName("value"       ) var value       : Int?     = null,
-  @SerializedName("text"        ) var text        : String?  = null,
-  @SerializedName("default"     ) var default     : Boolean? = null,
-  @SerializedName("description" ) var description : String?  = null
-
-)
+  val value : Int? = null,
+  val text : String? = null,
+  val default : Boolean? = null,
+  val description : String? = null
+):Parcelable

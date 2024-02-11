@@ -1,16 +1,18 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Filters (
 
-  @SerializedName("min"   ) var min   : Min?              = Min(),
-  @SerializedName("max"   ) var max   : Max?              = Max(),
-  @SerializedName("title" ) var title : String?           = null,
-  @SerializedName("name"  ) var name  : String?           = null,
-  @SerializedName("icon"  ) var icon  : String?           = null,
-  @SerializedName("type"  ) var type  : String?           = null,
-  @SerializedName("items" ) var items : ArrayList<String> = arrayListOf()
-
-)
+  val min : Min? = null,
+  val max : Max? = null,
+  val title : String? = null,
+  val name : String? = null,
+  val icon : String? = null,
+  val type : String? = null,
+  val items : List<String>? = null
+):Parcelable

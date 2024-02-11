@@ -1,17 +1,19 @@
-package com.example.example
+package com.homework.entities.model
 
-import com.google.gson.annotations.SerializedName
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 
+
+@Parcelize
 data class Rooms (
 
-  @SerializedName("reference"   ) var reference   : String?           = null,
-  @SerializedName("type"        ) var type        : Type?             = Type(),
-  @SerializedName("images"      ) var images      : ArrayList<Images> = arrayListOf(),
-  @SerializedName("offers"      ) var offers      : ArrayList<Offers> = arrayListOf(),
-  @SerializedName("facilities"  ) var facilities  : ArrayList<String> = arrayListOf(),
-  @SerializedName("information" ) var information : ArrayList<String> = arrayListOf(),
-  @SerializedName("alerts"      ) var alerts      : ArrayList<String> = arrayListOf(),
-  @SerializedName("description" ) var description : String?           = null
-
-)
+  val reference : String? = null,
+  val type : Type? = null,
+  val images : List<Images>? = null,
+  val offers : List<Offers>? = null,
+  val facilities : List<String>? = null,
+  val information : List<String>? = null,
+  val alerts : List<String>? = null,
+  val description : String? = null
+):Parcelable

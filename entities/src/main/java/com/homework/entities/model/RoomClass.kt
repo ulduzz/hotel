@@ -1,15 +1,16 @@
-package com.example.example
+package com.homework.entities.model
 
-import com.google.gson.annotations.SerializedName
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 
+
+@Parcelize
 data class RoomClass (
 
-  @SerializedName("code"        ) var code        : String?  = null,
-  @SerializedName("description" ) var description : String?  = null,
-  @SerializedName("refundable"  ) var refundable  : Boolean? = null,
-  @SerializedName("promotion"   ) var promotion   : Boolean? = null,
-  @SerializedName("Namepackage" ) var Namepackage     : Boolean? = null,
-  @SerializedName("offer"       ) var offer       : Boolean? = null
-
-)
+  val code : String? = null,
+  val description : String? = null,
+  val refundable : Boolean? = null,
+  val promotion : Boolean? = null,
+  val offer : Boolean? = null
+):Parcelable

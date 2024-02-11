@@ -1,12 +1,14 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Offers (
 
-  @SerializedName("hotels"         ) var hotels         : ArrayList<Hotels> = arrayListOf(),
-  @SerializedName("totalCount"     ) var totalCount     : Int?              = null,
-  @SerializedName("availableCount" ) var availableCount : Int?              = null
-
-)
+  val hotels : List<Hotels>? = null,
+  val totalCount : Int? = null,
+  val availableCount : Int? = null
+):Parcelable

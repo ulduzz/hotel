@@ -1,11 +1,13 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Checkin (
 
-  @SerializedName("begin_time" ) var beginTime : String? = null,
-  @SerializedName("end_time"   ) var endTime   : String? = null
-
-)
+  val begin_time : String? = null,
+  val end_time : String? = null
+):Parcelable

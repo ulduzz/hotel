@@ -1,13 +1,13 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
-import com.google.gson.annotations.SerializedName
 
-
+@Parcelize
 data class Type (
 
-  @SerializedName("id"                 ) var id                 : String? = null,
-  @SerializedName("name"               ) var name               : String? = null,
-  @SerializedName("typeCode"           ) var typeCode           : String? = null,
-  @SerializedName("characteristicCode" ) var characteristicCode : String? = null
-
-)
+  val id : String? = null,
+  val name : String? = null,
+  val typeCode : String? = null,
+  val characteristicCode : String? = null
+):Parcelable

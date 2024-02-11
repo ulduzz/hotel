@@ -1,40 +1,42 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Details (
 
-  @SerializedName("id"                          ) var id                          : String?           = null,
-  @SerializedName("slug"                        ) var slug                        : String?           = null,
-  @SerializedName("address"                     ) var address                     : Address?          = Address(),
-  @SerializedName("coordinate"                  ) var coordinate                  : Coordinate?       = Coordinate(),
-  @SerializedName("description"                 ) var description                 : String?           = null,
-  @SerializedName("hotelInfoDescription"        ) var hotelInfoDescription        : String?           = null,
-  @SerializedName("facilitiesGroup"             ) var facilitiesGroup             : ArrayList<String> = arrayListOf(),
-  @SerializedName("suitabilities"               ) var suitabilities               : ArrayList<String> = arrayListOf(),
-  @SerializedName("hotelDescriptions"           ) var hotelDescriptions           : ArrayList<String> = arrayListOf(),
-  @SerializedName("extra"                       ) var extra                       : Extra?            = Extra(),
-  @SerializedName("name"                        ) var name                        : String?           = null,
-  @SerializedName("images"                      ) var images                      : ArrayList<String> = arrayListOf(),
-  @SerializedName("starRating"                  ) var starRating                  : Int?              = null,
-  @SerializedName("reviewScore"                 ) var reviewScore                 : Int?              = null,
-  @SerializedName("reviews"                     ) var reviews                     : String?           = null,
-  @SerializedName("reviewInfo"                  ) var reviewInfo                  : String?           = null,
-  @SerializedName("reviewScoreLocalized"        ) var reviewScoreLocalized        : String?           = null,
-  @SerializedName("generalReviewScoreNote"      ) var generalReviewScoreNote      : String?           = null,
-  @SerializedName("checkInTime"                 ) var checkInTime                 : String?           = null,
-  @SerializedName("checkOutTime"                ) var checkOutTime                : String?           = null,
-  @SerializedName("domestic"                    ) var domestic                    : Boolean?          = null,
-  @SerializedName("reviewsTotalCount"           ) var reviewsTotalCount           : String?           = null,
-  @SerializedName("cityCenterPointDistance"     ) var cityCenterPointDistance     : Double?           = null,
-  @SerializedName("cityCenterPointDistanceName" ) var cityCenterPointDistanceName : String?           = null,
-  @SerializedName("hotelConcept"                ) var hotelConcept                : ArrayList<String> = arrayListOf(),
-  @SerializedName("nearByHotels"                ) var nearByHotels                : String?           = null,
-  @SerializedName("covidInfo"                   ) var covidInfo                   : String?           = null,
-  @SerializedName("imageTypes"                  ) var imageTypes                  : ArrayList<String> = arrayListOf(),
-  @SerializedName("hotelAutocompleteIcon"       ) var hotelAutocompleteIcon       : String?           = null,
-  @SerializedName("locationDistance"            ) var locationDistance            : String?           = null,
-  @SerializedName("policies"                    ) var policies                    : Policies?         = Policies()
-
-)
+  val id : String? = null,
+  val slug : String? = null,
+  val address : Address? = null,
+  val coordinate : Coordinate? = null,
+  val description : String? = null,
+  val hotelInfoDescription : String? = null,
+  val facilitiesGroup : List<String>? = null,
+  val suitabilities : List<String>? = null,
+  val hotelDescriptions : List<String>? = null,
+  val extra : Extra? = null,
+  val name : String? = null,
+  val images : List<String>? = null,
+  val starRating : Int? = null,
+  val reviewScore : Int? = null,
+  val reviews : String? = null,
+  val reviewInfo : String? = null,
+  val reviewScoreLocalized : String? = null,
+  val generalReviewScoreNote : String? = null,
+  val checkInTime : String? = null,
+  val checkOutTime : String? = null,
+  val domestic : Boolean? = null,
+  val reviewsTotalCount : String? = null,
+  val cityCenterPointDistance : Double? = null,
+  val cityCenterPointDistanceName : String? = null,
+  val hotelConcept : List<String>? = null,
+  val nearByHotels : String? = null,
+  val covidInfo : String? = null,
+  val imageTypes : List<String>? = null,
+  val hotelAutocompleteIcon : String? = null,
+  val locationDistance : String? = null,
+  val policies : Policies? = null
+):Parcelable

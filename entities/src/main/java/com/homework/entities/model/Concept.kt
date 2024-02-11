@@ -1,14 +1,16 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Concept (
 
-  @SerializedName("code"                 ) var code                 : String? = null,
-  @SerializedName("description"          ) var description          : String? = null,
-  @SerializedName("parentCode"           ) var parentCode           : String? = null,
-  @SerializedName("conceptIconColorCode" ) var conceptIconColorCode : String? = null,
-  @SerializedName("conceptIcon"          ) var conceptIcon          : String? = null
-
-)
+  val code : Int? = null,
+  val description : String? = null,
+  val parentCode : String? = null,
+  val conceptIconColorCode : String? = null,
+  val conceptIcon : String? = null
+):Parcelable

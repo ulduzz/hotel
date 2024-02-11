@@ -1,11 +1,14 @@
-package com.example.example
+package com.homework.entities.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
 
 import com.google.gson.annotations.SerializedName
 
 
+@Parcelize
 data class Country (
 
-  @SerializedName("code" ) var code : String? = null,
-  @SerializedName("name" ) var name : String? = null
-
-)
+  val code : String? = null,
+  val name : String? = null
+):Parcelable
